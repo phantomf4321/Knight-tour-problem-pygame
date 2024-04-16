@@ -27,7 +27,23 @@ chessboard = [[0, 5, 14, 9, 20],
 # Knight's possible moves (relative positions)
 knight_moves = [(0, 0), (2, 1), (1, 2), (-1, 2), (-2, 1),
                 (-2, -1), (-1, -2), (1, -2), (2, -1)]
+def index_2d(myList, v):
+    for i, x in enumerate(myList):
+        if v in x:
+            return (i, x.index(v))
 
+def create_positions(board):
+    moves = []
+    for i in range(0,25):
+        index = index_2d(board, i)
+        moves.append(index)
+
+
+
+
+
+
+    return moves
 def draw_chessboard():
     for row in range(ROWS):
         for col in range(COLS):
@@ -37,7 +53,7 @@ def draw_chessboard():
 def draw_knight(x, y):
     pygame.draw.circle(screen, GREEN, (x * SQ_SIZE + SQ_SIZE // 2, y * SQ_SIZE + SQ_SIZE // 2), SQ_SIZE // 3)
 
-def main():
+def main2():
     running = True
     knight_x, knight_y = 0, 0  # Initial position of the knight
 
@@ -62,6 +78,11 @@ def main():
 
     pygame.quit()
     sys.exit()
+
+def main():
+    moves = create_moves(chessboard)
+
+    print(moves)
 
 if __name__ == "__main__":
     main()
