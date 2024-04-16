@@ -24,9 +24,7 @@ chessboard = [[0, 5, 14, 9, 20],
               [7, 12, 23, 16, 3],
               [24, 17, 2, 11, 22]]
 
-# Knight's possible moves (relative positions)
-knight_moves = [(0, 0), (2, 1), (1, 2), (-1, 2), (-2, 1),
-                (-2, -1), (-1, -2), (1, -2), (2, -1)]
+
 def index_2d(myList, v):
     for i, x in enumerate(myList):
         if v in x:
@@ -51,12 +49,10 @@ def create_moves(board):
             new_move = (p[0]-pre_x, p[1]-pre_y)
 
             moves.append(new_move)
-
-
-
-
-
     return moves
+
+# Knight's possible moves (relative positions)
+knight_moves = create_moves(chessboard)
 def draw_chessboard():
     for row in range(ROWS):
         for col in range(COLS):
