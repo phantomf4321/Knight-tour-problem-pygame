@@ -60,7 +60,7 @@ def draw_chessboard():
             pygame.draw.rect(screen, color, (col * SQ_SIZE, row * SQ_SIZE, SQ_SIZE, SQ_SIZE))
 
 def draw_knight(x, y):
-    pygame.draw.circle(screen, GREEN, (x * SQ_SIZE + SQ_SIZE // 2, y * SQ_SIZE + SQ_SIZE // 2), SQ_SIZE // 3)
+    pygame.image.load("knight.png")
 
 def main():
     running = True
