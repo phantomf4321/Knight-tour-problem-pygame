@@ -62,7 +62,7 @@ def draw_chessboard():
 def draw_knight(x, y):
     pygame.draw.circle(screen, GREEN, (x * SQ_SIZE + SQ_SIZE // 2, y * SQ_SIZE + SQ_SIZE // 2), SQ_SIZE // 3)
 
-def main2():
+def main():
     running = True
     knight_x, knight_y = 0, 0  # Initial position of the knight
 
@@ -88,10 +88,6 @@ def main2():
     pygame.quit()
     sys.exit()
 
-def main():
-    moves = create_moves(chessboard)
-
-    print(moves)
 
 if __name__ == "__main__":
     main()
