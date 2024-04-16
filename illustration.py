@@ -25,7 +25,7 @@ chessboard = [[0, 5, 14, 9, 20],
               [24, 17, 2, 11, 22]]
 
 # Knight's possible moves (relative positions)
-knight_moves = [(2, 1), (1, 2), (-1, 2), (-2, 1),
+knight_moves = [(0, 0), (2, 1), (1, 2), (-1, 2), (-2, 1),
                 (-2, -1), (-1, -2), (1, -2), (2, -1)]
 
 def draw_chessboard():
@@ -55,7 +55,7 @@ def main():
             if 0 <= new_x < COLS and 0 <= new_y < ROWS:
                 draw_knight(new_x, new_y)
                 pygame.display.flip()
-                time.sleep(0.1)  # Pause for animation effect
+                time.sleep(1)  # Pause for animation effect
                 knight_x, knight_y = new_x, new_y
 
         pygame.display.flip()
