@@ -20,6 +20,8 @@ b = Board.Board(n,block_size)
 # calculate move
 result = s.knightTour(n)
 
+print(result)
+
 # find next move
 def find(move):
     for i in range(n):
