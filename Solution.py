@@ -1,6 +1,6 @@
 class Solution:
     def knightTour(self, N):
-        def isSafe(x, y):
+        def isSafe(x, y):#checked
             # Check cell (x, y) is not OOB and value is not visited already
             if 0 <= x < N and 0 <= y < N and board[x][y] == -1:
                 return True
