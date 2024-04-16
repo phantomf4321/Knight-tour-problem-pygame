@@ -22,7 +22,7 @@ class Solution:
                 if isSafe(next_x, next_y):
                     # 4) Take this move
                     board[next_x][next_y] = moveCount
-                    print(board)
+
                     # 5) Check if this move leads to a solution from all recur moves
                     if backtrack(next_x, next_y, moveCount+1):
                         return True
