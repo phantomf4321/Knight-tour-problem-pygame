@@ -35,14 +35,14 @@ def move_generator(n):
 
 
 # game loop
-running = True
-clock = pygame.time.Clock()
+#running = True
+#clock = pygame.time.Clock()
 
 prev = None
 solving = False
 gen = move_generator(n)
 
-while running:
+"""while running:
     clock.tick(2)
 
     for event in pygame.event.get():
@@ -66,7 +66,7 @@ while running:
             print(result)
             solving = False
 
-    screen.fill((0,0,0))
-    screen.blit(b.surface,(10,10))
-    pygame.display.update()
-
+    #screen.fill((0,0,0))
+    #screen.blit(b.surface,(10,10))
+    #pygame.display.update()
+"""
