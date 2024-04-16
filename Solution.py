@@ -16,6 +16,8 @@ class Solution:
                 next_x = cur_x + move_x[i]
                 next_y = cur_y + move_y[i]
 
+                #print("next x{} and next y{}".format(next_x, next_y))
+
                 # 3) Check if this move can be taken
                 if isSafe(next_x, next_y):
                     # 4) Take this move
