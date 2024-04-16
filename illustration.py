@@ -1,5 +1,6 @@
 import pygame
 import sys
+import time
 
 # Constants
 WIDTH, HEIGHT = 400, 400
@@ -9,7 +10,7 @@ SQ_SIZE = WIDTH // COLS
 # Initialize Pygame
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Knight's Moves on Chessboard")
+pygame.display.set_caption("Knight's Moves Animation")
 
 # Colors
 WHITE = (255, 255, 255)
@@ -47,13 +48,15 @@ def main():
 
         screen.fill(BLACK)
         draw_chessboard()
-        draw_knight(knight_x, knight_y)
 
-        # Show knight's valid moves
+        # Animate knight's moves
         for dx, dy in knight_moves:
             new_x, new_y = knight_x + dx, knight_y + dy
             if 0 <= new_x < COLS and 0 <= new_y < ROWS:
-                pygame.draw.circle(screen, GREEN, (new_x * SQ_SIZE + SQ_SIZE // 2, new_y * SQ_SIZE + SQ_SIZE // 2), 5)
+                draw_knight(new_x, new_y)
+                pygame.display.flip()
+                time.sleep(0.5)  # Pause for animation effect
+                knight_x, knight_y = new_x, new_y
 
         pygame.display.flip()
 
