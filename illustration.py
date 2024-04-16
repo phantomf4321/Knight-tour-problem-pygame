@@ -37,13 +37,20 @@ def create_positions(board):
     for i in range(0,25):
         index = index_2d(board, i)
         moves.append(index)
+    return moves
 
 def create_moves(board):
     positions = create_positions(board)
     moves = [(0, 0)]
-    for i in range(1, len(positions)):
-        print
-        li[i], li[i - 1]
+    for i, p in enumerate(positions):
+        if i > 0:
+
+            pre_x = positions[i-1][0]
+            pre_y = positions[i-1][1]
+
+            new_move = (p[0]-pre_x, p[1]-pre_y)
+
+            moves.append(new_move)
 
 
 
