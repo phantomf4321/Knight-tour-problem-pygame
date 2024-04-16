@@ -38,6 +38,11 @@ def create_positions(board):
         index = index_2d(board, i)
         moves.append(index)
 
+def create_moves(board):
+    positions = create_positions(board)
+    moves = [(0, 0)]
+    for i, p in enumerate(positions):
+        print(i, p)
 
 
 
