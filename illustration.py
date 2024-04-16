@@ -15,7 +15,7 @@ pygame.display.set_caption("Knight's Moves Animation")
 # Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
-GREEN = (0, 255, 0)
+GREEN = (0, 205, 100)
 
 # Chessboard representation
 chessboard = [[0, 5, 14, 9, 20],
@@ -60,7 +60,7 @@ def draw_chessboard():
             pygame.draw.rect(screen, color, (col * SQ_SIZE, row * SQ_SIZE, SQ_SIZE, SQ_SIZE))
 
 def draw_knight(x, y):
-    pygame.image.load("knight.png")
+    pygame.draw.circle(screen, GREEN, (x * SQ_SIZE + SQ_SIZE // 2, y * SQ_SIZE + SQ_SIZE // 2), SQ_SIZE // 3)
 
 def main():
     running = True
