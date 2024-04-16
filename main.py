@@ -7,9 +7,9 @@ import sys
 pygame.init()
 block_size = 40
 
-n = 8
+n = 5
 
-
+#size of blocks...
 screen_width = block_size * n + 20
 screen_height = block_size * n + 20
 screen = pygame.display.set_mode((screen_width,screen_height))
