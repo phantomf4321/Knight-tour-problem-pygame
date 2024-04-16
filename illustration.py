@@ -73,15 +73,19 @@ def main():
 
         screen.fill(BLACK)
         draw_chessboard()
-
+        move_counter = 0
         # Animate knight's moves
         for dx, dy in knight_moves:
-            new_x, new_y = knight_x + dx, knight_y + dy
-            if 0 <= new_x < COLS and 0 <= new_y < ROWS:
-                draw_knight(new_x, new_y)
-                pygame.display.flip()
-                time.sleep(0.5)  # Pause for animation effect
-                knight_x, knight_y = new_x, new_y
+            if move_counter < 25:
+                new_x, new_y = knight_x + dx, knight_y + dy
+                if 0 <= new_x < COLS and 0 <= new_y < ROWS:
+                    draw_knight(new_x, new_y)
+                    pygame.display.flip()
+                    time.sleep(0.5)  # Pause for animation effect
+                    knight_x, knight_y = new_x, new_y
+                move_counter = move_counter+1
+            else:
+                break
 
         pygame.display.flip()
 
