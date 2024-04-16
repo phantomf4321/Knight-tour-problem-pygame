@@ -42,7 +42,8 @@ def create_moves(board):
     positions = create_positions(board)
     moves = [(0, 0)]
     for i, p in enumerate(positions):
-        print(i, p)
+        if i > 0:
+            print(i, p)
 
 
 
