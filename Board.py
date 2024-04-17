@@ -46,4 +46,4 @@ class Knight:
         self.rect.center = position
 
     def draw(self,surface):
-        surface.blit(self.image,self.rect)
+        surface.blit(self.image, self.rect)

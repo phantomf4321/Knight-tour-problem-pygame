@@ -14,7 +14,7 @@ pygame.display.set_caption("Knight's Moves")
 
 # Colors
 WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+BLACK = (50, 50, 50)
 GREEN = (0, 205, 100)
 
 # Chessboard representation
@@ -55,9 +55,19 @@ def draw_chessboard():
             color = WHITE if (row + col) % 2 == 0 else BLACK
             pygame.draw.rect(screen, color, (col * SQ_SIZE, row * SQ_SIZE, SQ_SIZE, SQ_SIZE))
 
-def draw_knight(x, y):
-    pygame.draw.circle(screen, GREEN, (x * SQ_SIZE + SQ_SIZE // 2, y * SQ_SIZE + SQ_SIZE // 2), SQ_SIZE // 3)
 
+# Load the image (do this outside the draw_knight function)
+knight_image = pygame.image.load('knight.png').convert()
+knight_image = pygame.transform.smoothscale(knight_image,(62,62))
+
+
+def draw_knight(x, y):
+    # Calculate the position where the image will be placed
+    image_x = x * SQ_SIZE
+    image_y = y * SQ_SIZE
+
+    # Blit the image onto the screen at the calculated position
+    screen.blit(knight_image, (image_x, image_y))
 def main():
     running = True
     knight_x, knight_y = 0, 0  # Initial position of the knight
