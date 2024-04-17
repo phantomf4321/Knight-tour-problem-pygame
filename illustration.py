@@ -47,6 +47,13 @@ def create_moves(board):
             moves.append(new_move)
     return moves
 
+def print_chess_board():
+    for r in chessboard:
+        for c in r:
+            print("| {} |".format(c), end=" ")
+        print("")
+        print("-----------------------------------------------------")
+
 # Knight's possible moves (relative positions)
 knight_moves = create_moves(chessboard)
 def draw_chessboard():
@@ -93,12 +100,8 @@ def main():
                 knight_x, knight_y = new_x, new_y
 
         pygame.display.flip()
-        print(chessboard)
-        for r in chessboard:
-            for c in r:
-                print("| {} |".format(c), end=" ")
-            print("")
-            print("-----------------------------------------------------")
+        print_chess_board()
+
     pygame.quit()
     sys.exit()
 
