@@ -94,6 +94,11 @@ def main():
 
         pygame.display.flip()
         print(chessboard)
+        for r in chessboard:
+            for c in r:
+                print("| {} |".format(c), end=" ")
+            print("")
+            print("-----------------------------------------------------")
     pygame.quit()
     sys.exit()
 
