@@ -47,5 +47,5 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     print("hiiii")
-    print(s.knightTour(6))
+    print(s.knightTour(8))
     print("hiiii")
