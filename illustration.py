@@ -3,7 +3,7 @@ import sys
 import time
 
 # Constants
-WIDTH, HEIGHT = 400, 400
+WIDTH, HEIGHT = 500, 500
 ROWS, COLS = 5, 5
 SQ_SIZE = WIDTH // COLS
 
