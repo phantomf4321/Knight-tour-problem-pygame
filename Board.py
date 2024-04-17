@@ -11,5 +11,3 @@ class Board:
         self.WHITE = (200, 200, 200)
         self.BLACK = (50, 50, 50)
 
-    # grt all data of board class as a list
-    def get_data(self):
