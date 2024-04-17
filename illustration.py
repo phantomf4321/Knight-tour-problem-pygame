@@ -79,7 +79,7 @@ def main():
             if 0 <= new_x < COLS and 0 <= new_y < ROWS:
                 draw_knight(new_x, new_y)
                 pygame.display.flip()
-                time.sleep(0.5)  # Pause for animation effect
+                time.sleep(0.1)  # Pause for animation effect
                 knight_x, knight_y = new_x, new_y
 
         pygame.display.flip()
