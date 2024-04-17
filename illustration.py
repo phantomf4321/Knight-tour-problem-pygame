@@ -4,7 +4,7 @@ import time
 
 # Constants
 WIDTH, HEIGHT = 500, 500
-ROWS, COLS = 6, 6
+ROWS, COLS = 8, 8
 SQ_SIZE = WIDTH // COLS
 
 # Initialize Pygame
@@ -18,7 +18,7 @@ BLACK = (0, 0, 0)
 GREEN = (0, 205, 100)
 
 # Chessboard representation
-chessboard = [[0, 15, 6, 25, 10, 13], [33, 24, 11, 14, 5, 26], [16, 1, 32, 7, 12, 9], [31, 34, 23, 20, 27, 4], [22, 17, 2, 29, 8, 19], [35, 30, 21, 18, 3, 28]]
+chessboard = [[0, 59, 38, 33, 30, 17, 8, 63], [37, 34, 31, 60, 9, 62, 29, 16], [58, 1, 36, 39, 32, 27, 18, 7], [35, 48, 41, 26, 61, 10, 15, 28], [42, 57, 2, 49, 40, 23, 6, 19], [47, 50, 45, 54, 25, 20, 11, 14], [56, 43, 52, 3, 22, 13, 24, 5], [51, 46, 55, 44, 53, 4, 21, 12]]
 
 
 def index_2d(myList, v):
@@ -28,7 +28,7 @@ def index_2d(myList, v):
 
 def create_positions(board):
     moves = []
-    for i in range(0,36):
+    for i in range(0, 64):
         index = index_2d(board, i)
         moves.append(index)
     return moves
