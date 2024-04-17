@@ -62,7 +62,9 @@ def main():
     running = True
     knight_x, knight_y = 0, 0  # Initial position of the knight
 
-    while running:
+    move_counter = 0
+
+    while running and move_counter<64:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
@@ -72,6 +74,7 @@ def main():
 
         # Animate knight's moves
         for dx, dy in knight_moves:
+            move_counter = move_counter+1
             new_x, new_y = knight_x + dx, knight_y + dy
             if 0 <= new_x < COLS and 0 <= new_y < ROWS:
                 draw_knight(new_x, new_y)
