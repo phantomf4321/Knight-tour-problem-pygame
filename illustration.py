@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Knight's Moves")
 
 # Colors
-WHITE = (255, 255, 255)
+WHITE = (200, 200, 200)
 BLACK = (50, 50, 50)
 GREEN = (0, 205, 100)
 
