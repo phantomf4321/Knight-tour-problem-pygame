@@ -10,7 +10,7 @@ SQ_SIZE = WIDTH // COLS
 # Initialize Pygame
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Knight's Moves Animation")
+pygame.display.set_caption("Knight's Moves")
 
 # Colors
 WHITE = (255, 255, 255)
