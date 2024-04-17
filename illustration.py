@@ -97,6 +97,8 @@ def main():
     pygame.quit()
     sys.exit()
 
+    print(chessboard)
+
 
 if __name__ == "__main__":
     main()
