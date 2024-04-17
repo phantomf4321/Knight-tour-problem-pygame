@@ -93,11 +93,11 @@ def main():
                 knight_x, knight_y = new_x, new_y
 
         pygame.display.flip()
-
+        print(chessboard)
     pygame.quit()
     sys.exit()
 
-    print(chessboard)
+
 
 
 if __name__ == "__main__":
