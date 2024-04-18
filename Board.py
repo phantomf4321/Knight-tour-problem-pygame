@@ -26,6 +26,10 @@ class Board:
 
         return data
 
+class Knight:
+    def __init__(self):
+
+
 class Moves:
     def __init__(self):
         return 0
