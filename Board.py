@@ -12,8 +12,26 @@ class Board:
         self.WHITE = (200, 200, 200)
         self.BLACK = (50, 50, 50)
 
+    def get_data(self):
+        data = {
+            "size": self.n,
+            "width": self.WIDTH,
+            "height": self.HEIGHT,
+            "row": self.ROWS,
+            "col": self.COLS,
+            "sq_size": self.SQ_SIZE,
+            "black": self.BLACK,
+            "white": self.WHITE
+        }
+
+        return data
 
 class Moves:
     def __init__(self):
         return 0
 
+
+
+board1 = Board(8)
+data = board1.get_data()
+print(data)
