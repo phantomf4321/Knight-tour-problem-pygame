@@ -1,5 +1,6 @@
 class Board:
     def __init__(self, n):
+        print("{}*{} board is created!".format(n, n))
         self.n = n # create n*n board
 
         # Constants
@@ -13,4 +14,6 @@ class Board:
 
 
 class Moves:
+    def __init__(self):
+        return 0
 
