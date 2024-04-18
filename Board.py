@@ -35,6 +35,9 @@ class Knight:
 
         print("Knight constructore is called!")
 
+    def get_knight(self):
+        return self.knight_image
+
 
 
 class Moves:
@@ -66,6 +69,9 @@ class Moves:
 
                 moves.append(new_move)
         return moves
+
+    def get_chessboard_matrix(self):
+        return self.chessboard_matrix
 
     def get_positions(self):
         data = self.create_positions()
