@@ -47,7 +47,7 @@ class Illustrator:
 
         move_counter = 0
 
-        while running:
+        while running and move_counter < 64:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
@@ -62,7 +62,7 @@ class Illustrator:
                 if 0 <= new_x < self.data['col'] and 0 <= new_y < self.data['row']:
                     self.draw_knight(new_x, new_y)
                     pygame.display.flip()
-                    time.sleep(0.5)  # Pause for animation effect
+                    time.sleep(0.3)  # Pause for animation effect
                     knight_x, knight_y = new_x, new_y
 
             pygame.display.flip()
