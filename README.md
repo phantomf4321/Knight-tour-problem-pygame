@@ -2,8 +2,9 @@
 Knight tour problem solved by backtrack algorithm. Visualizing with Pygame.
 
 <p align="center">
-  <video src="output.mp4" width="500px"></video>
+  <video src="https://github.com/phantomf4321/Knight-tour-problem-pygame/assets/83742735/d185ca1c-045c-4d1c-8d20-336a81781b25" width="500px"></video>
 </p>
+
 
 ### 8X8 Board
 ![knight-tour-8X8](output.gif)
