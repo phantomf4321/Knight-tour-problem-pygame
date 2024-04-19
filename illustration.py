@@ -31,7 +31,7 @@ class Illustrator:
         image_y = y * self.data['sq_size']
 
         # Blit the image onto the screen at the calculated position
-        screen.blit(self.knight_image, (image_x, image_y))
+        self.screen.blit(self.knight_image, (image_x, image_y))
 
 
     def print_chess_board(self):
@@ -52,7 +52,7 @@ class Illustrator:
                 if event.type == pygame.QUIT:
                     running = False
 
-            screen.fill(self.data['black'])
+            self.screen.fill(self.data['black'])
             self.draw_chessboard()
 
             # Animate knight's moves
