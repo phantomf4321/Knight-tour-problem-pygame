@@ -5,7 +5,8 @@ import time
 
 class Illustrator:
     def __init__(self, chessboard):
-        self.board1 = Board(len(chessboard[0]))
+        self.n = len(chessboard[0])
+        self.board1 = Board(self.n)
         self.knight = Knight()
         self.moves = Moves(chessboard)
 
@@ -47,7 +48,7 @@ class Illustrator:
 
         move_counter = 0
 
-        while running and move_counter < 64:
+        while running and move_counter < self.n * self.n:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
