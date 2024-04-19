@@ -1,11 +1,14 @@
 import Solution
+from illustration import *
 
 
 
 n = 8
 s = Solution.Solution()
 # calculate move
-result = s.knightTour(n)
+chessboard = s.knightTour(n)
 
-print(result)
+# illustration
+ill = Illustrator(chessboard)
+ill.illustrate()
 
